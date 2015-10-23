@@ -12,7 +12,6 @@
 		DC0A75A21BDAF4B5005FE691 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC0A75A01BDAF4B5005FE691 /* Main.storyboard */; };
 		DC0A75A41BDAF4B5005FE691 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC0A75A31BDAF4B5005FE691 /* Assets.xcassets */; };
 		DC0A75A71BDAF4B5005FE691 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC0A75A51BDAF4B5005FE691 /* LaunchScreen.storyboard */; };
-		DC0A75B41BDAF5C1005FE691 /* BezierCurveArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0A75B11BDAF5C1005FE691 /* BezierCurveArrowView.swift */; settings = {ASSET_TAGS = (); }; };
 		DC0A75B51BDAF5C1005FE691 /* BezierCurveArrowViewObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0A75B31BDAF5C1005FE691 /* BezierCurveArrowViewObjC.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -25,7 +24,6 @@
 		DC0A75A61BDAF4B5005FE691 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC0A75A81BDAF4B5005FE691 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC0A75B01BDAF5C1005FE691 /* BezierCurveExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BezierCurveExample-Bridging-Header.h"; sourceTree = "<group>"; };
-		DC0A75B11BDAF5C1005FE691 /* BezierCurveArrowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BezierCurveArrowView.swift; path = ../../BezierCurveView/BezierCurveArrowView.swift; sourceTree = "<group>"; };
 		DC0A75B21BDAF5C1005FE691 /* BezierCurveArrowViewObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BezierCurveArrowViewObjC.h; path = ../../BezierCurveView/BezierCurveArrowViewObjC.h; sourceTree = "<group>"; };
 		DC0A75B31BDAF5C1005FE691 /* BezierCurveArrowViewObjC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BezierCurveArrowViewObjC.m; path = ../../BezierCurveView/BezierCurveArrowViewObjC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,7 +73,6 @@
 		DC0A75B61BDAF5E1005FE691 /* BezierCurveView */ = {
 			isa = PBXGroup;
 			children = (
-				DC0A75B11BDAF5C1005FE691 /* BezierCurveArrowView.swift */,
 				DC0A75B21BDAF5C1005FE691 /* BezierCurveArrowViewObjC.h */,
 				DC0A75B31BDAF5C1005FE691 /* BezierCurveArrowViewObjC.m */,
 			);
@@ -153,7 +150,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC0A75B41BDAF5C1005FE691 /* BezierCurveArrowView.swift in Sources */,
 				DC0A759F1BDAF4B5005FE691 /* ViewController.swift in Sources */,
 				DC0A759D1BDAF4B5005FE691 /* AppDelegate.swift in Sources */,
 				DC0A75B51BDAF5C1005FE691 /* BezierCurveArrowViewObjC.m in Sources */,
