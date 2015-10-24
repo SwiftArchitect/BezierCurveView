@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ViewController.m
 //  BezierCurveExample
 //
 //  Copyright (c) 2015 Xavier Schott
@@ -23,20 +23,22 @@
 //  SOFTWARE.
 //
 
-import UIKit
+#import "ViewController.h"
 
-class ViewController: UIViewController {
+@interface ViewController ()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+@end
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+@implementation ViewController
 
-
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+@end
