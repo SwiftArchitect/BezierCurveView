@@ -1,6 +1,6 @@
 //
-//  BezierCurveArrowViewObjC.m
-//  BezierCurveView
+//  AppDelegate.h
+//  BezierCurveExample
 //
 //  Copyright (c) 2015 Xavier Schott
 //
@@ -23,18 +23,12 @@
 //  SOFTWARE.
 //
 
-#import "BezierCurveArrowViewObjC.h"
+#import <UIKit/UIKit.h>
 
-@implementation BezierCurveArrowViewObjC
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-@dynamic startAnchor;
-@dynamic startOffset;
-@dynamic startControl;
-@dynamic endAnchor;
-@dynamic endOffset;
-@dynamic endControl;
-@dynamic lineWidth;
-@dynamic arrowSize;
-@dynamic showHandles;
+@property (strong, nonatomic) UIWindow *window;
+
 
 @end
+

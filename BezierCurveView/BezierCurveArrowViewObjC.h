@@ -23,19 +23,10 @@
 //  SOFTWARE.
 //
 
-#import <UIKit/UIKit.h>
+#import "BezierCurveArrowViewObjC7.h"
 
 IB_DESIGNABLE
-@interface BezierCurveArrowViewObjC: UIView
-
-typedef NS_ENUM(NSInteger, Corner) {
-    CornerTl = 0,   // topLeft
-    CornerTr,       // topRight
-    CornerBl,       // bottomLeft
-    CornerBr,       // bottomRight
-    CornerCenter    // center
-};
-
+@interface BezierCurveArrowViewObjC: BezierCurveArrowViewObjC7
 
 @property (nonatomic, assign) IBInspectable NSInteger startAnchor;
 @property (nonatomic, assign) IBInspectable CGPoint startOffset;
@@ -46,6 +37,5 @@ typedef NS_ENUM(NSInteger, Corner) {
 @property (nonatomic, assign) IBInspectable CGFloat lineWidth;
 @property (nonatomic, assign) IBInspectable CGFloat arrowSize;
 @property (nonatomic, assign) IBInspectable BOOL showHandles;
-
 
 @end

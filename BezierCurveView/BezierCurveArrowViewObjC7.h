@@ -1,5 +1,5 @@
 //
-//  BezierCurveArrowViewObjC.m
+//  BezierCurveArrowViewObjC7.h
 //  BezierCurveView
 //
 //  Copyright (c) 2015 Xavier Schott
@@ -23,18 +23,28 @@
 //  SOFTWARE.
 //
 
-#import "BezierCurveArrowViewObjC.h"
+#import <UIKit/UIKit.h>
 
-@implementation BezierCurveArrowViewObjC
+@interface BezierCurveArrowViewObjC7: UIView
 
-@dynamic startAnchor;
-@dynamic startOffset;
-@dynamic startControl;
-@dynamic endAnchor;
-@dynamic endOffset;
-@dynamic endControl;
-@dynamic lineWidth;
-@dynamic arrowSize;
-@dynamic showHandles;
+typedef NS_ENUM(NSInteger, Corner) {
+    CornerTl = 0,   // topLeft
+    CornerTr,       // topRight
+    CornerBl,       // bottomLeft
+    CornerBr,       // bottomRight
+    CornerCenter    // center
+};
+
+
+@property (nonatomic, assign) NSInteger startAnchor;
+@property (nonatomic, assign) CGPoint startOffset;
+@property (nonatomic, assign) CGPoint startControl;
+@property (nonatomic, assign) NSInteger endAnchor;
+@property (nonatomic, assign) CGPoint endOffset;
+@property (nonatomic, assign) CGPoint endControl;
+@property (nonatomic, assign) CGFloat lineWidth;
+@property (nonatomic, assign) CGFloat arrowSize;
+@property (nonatomic, assign) BOOL showHandles;
+
 
 @end

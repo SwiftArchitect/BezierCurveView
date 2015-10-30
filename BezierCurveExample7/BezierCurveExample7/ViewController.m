@@ -1,6 +1,6 @@
 //
-//  BezierCurveArrowViewObjC.m
-//  BezierCurveView
+//  ViewController.m
+//  BezierCurveExample
 //
 //  Copyright (c) 2015 Xavier Schott
 //
@@ -23,18 +23,22 @@
 //  SOFTWARE.
 //
 
-#import "BezierCurveArrowViewObjC.h"
+#import "ViewController.h"
 
-@implementation BezierCurveArrowViewObjC
+@interface ViewController ()
 
-@dynamic startAnchor;
-@dynamic startOffset;
-@dynamic startControl;
-@dynamic endAnchor;
-@dynamic endOffset;
-@dynamic endControl;
-@dynamic lineWidth;
-@dynamic arrowSize;
-@dynamic showHandles;
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 @end
