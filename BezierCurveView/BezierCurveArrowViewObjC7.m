@@ -95,6 +95,7 @@
         CGContextSetFillColorWithColor(context, self.tintColor.CGColor);
         CGContextAddPath(context, headPath);
         CGContextFillPath(context);
+        CGPathRelease(headPath);
         
         // Control Points
         if(self.showHandles) {
