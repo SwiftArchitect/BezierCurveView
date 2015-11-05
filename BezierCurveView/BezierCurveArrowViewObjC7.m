@@ -56,21 +56,21 @@
     if(context ) {
         CGContextBeginPath(context);
         const CGPoint start = [self anchorPoint:self.startAnchor offset:self.startOffset];
-        const CGPoint head = [self anchorPoint:self.endAnchor offset:self.endOffset];
+        const CGPoint end = [self anchorPoint:self.endAnchor offset:self.endOffset];
         
-        const CGPoint cp1 = CGPointMake(start.x + self.startControl.x, start.y + self.startControl.y);
-        const CGPoint cp2 = CGPointMake(head.x + self.endControl.x, head.y + self.endControl.y);
+        const CGPoint startCp = CGPointMake(start.x + self.startControl.x, start.y + self.startControl.y);
+        const CGPoint endCp = CGPointMake(end.x + self.endControl.x, end.y + self.endControl.y);
         CGContextMoveToPoint(context, start.x, start.y);
         CGContextAddCurveToPoint(
                                  context,
-                                 cp1.x, cp1.y,
-                                 cp2.x, cp2.y,
-                                 head.x, head.y);
+                                 startCp.x, startCp.y,
+                                 endCp.x, endCp.y,
+                                 end.x, end.y);
         
         // Connect the arrowhead to the shaft
-        const CGFloat slope = [self angle:head m:cp2];
-        const CGPoint spine = [self polarToCartesian:head r:self.arrowSize/2 θ:slope + M_PI];
-        CGContextMoveToPoint(context, head.x, head.y);
+        const CGFloat angle = [self angle:end m:endCp];
+        const CGPoint spine = [self polarToCartesian:end radius:self.arrowSize/2 angle:angle + M_PI];
+        CGContextMoveToPoint(context, end.x, end.y);
         CGContextAddLineToPoint(context, spine.x, spine.y);
         
         CGContextSetStrokeColorWithColor(context, self.tintColor.CGColor);
@@ -78,17 +78,17 @@
         CGContextStrokePath(context);
         
         // Draw arrowhead point and ears
-        const CGPoint pointe = [self polarToCartesian:head r:self.arrowSize θ:slope + M_PI];
+        const CGPoint pointe = [self polarToCartesian:end radius:self.arrowSize angle:angle + M_PI];
         const CGMutablePathRef headPath = CGPathCreateMutable();
         CGPathMoveToPoint(headPath, nil , pointe.x, pointe.y);
         
-        const CGPoint ear1 = [self polarToCartesian:pointe r:self.arrowSize θ:slope + 0.3];
+        const CGPoint ear1 = [self polarToCartesian:pointe radius:self.arrowSize angle:angle + 0.3];
         CGPathAddLineToPoint(headPath, nil, ear1.x, ear1.y);
         
-        const CGPoint neck = [self polarToCartesian:head r:self.arrowSize/4 θ:slope + M_PI];
+        const CGPoint neck = [self polarToCartesian:end radius:self.arrowSize/4 angle:angle + M_PI];
         CGPathAddLineToPoint(headPath, nil, neck.x, neck.y);
         
-        const CGPoint ear2 = [self polarToCartesian:pointe r:self.arrowSize θ:slope - 0.3];
+        const CGPoint ear2 = [self polarToCartesian:pointe radius:self.arrowSize angle:angle - 0.3];
         CGPathAddLineToPoint(headPath, nil, ear2.x, ear2.y);
         
         CGPathCloseSubpath(headPath);
@@ -102,9 +102,9 @@
             const CGFloat cpRadius = 3;
             CGContextBeginPath(context);
             CGContextMoveToPoint(context, start.x, start.y);
-            CGContextAddLineToPoint(context, cp1.x, cp1.y);
-            CGContextMoveToPoint(context, head.x, head.y);
-            CGContextAddLineToPoint(context, cp2.x, cp2.y);
+            CGContextAddLineToPoint(context, startCp.x, startCp.y);
+            CGContextMoveToPoint(context, end.x, end.y);
+            CGContextAddLineToPoint(context, endCp.x, endCp.y);
             
             CGContextSetStrokeColorWithColor(context, [UIColor redColor].CGColor);
             CGContextSetLineWidth(context, 2);
@@ -112,14 +112,16 @@
             
             CGContextSetFillColorWithColor(context, [UIColor redColor].CGColor);
             CGContextFillEllipseInRect(context,
-                                       CGRectMake(cp1.x-cpRadius, cp1.y-cpRadius, cpRadius+cpRadius, cpRadius+cpRadius));
+                                       CGRectMake(startCp.x-cpRadius, startCp.y-cpRadius,
+                                                  cpRadius+cpRadius, cpRadius+cpRadius));
             CGContextFillEllipseInRect(context,
-                                       CGRectMake(cp2.x-cpRadius, cp2.y-cpRadius, cpRadius+cpRadius, cpRadius+cpRadius));
+                                       CGRectMake(endCp.x-cpRadius, endCp.y-cpRadius,
+                                                  cpRadius+cpRadius, cpRadius+cpRadius));
         }
     }
 }
 
-- (CGPoint)polarToCartesian:(CGPoint)center r:(CGFloat)r θ:(CGFloat)θ {
+- (CGPoint)polarToCartesian:(CGPoint)center radius:(CGFloat)r angle:(CGFloat)θ {
     const CGPoint m = CGPointMake(r * (CGFloat)cos(θ), r * (CGFloat)sin(θ));
     return CGPointMake(center.x + m.x, center.y + m.y);
 }
