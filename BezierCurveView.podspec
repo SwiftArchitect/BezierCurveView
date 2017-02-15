@@ -1,6 +1,8 @@
 Pod::Spec.new do |spec|
+
+  # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   spec.name         = "BezierCurveView"
-  spec.version      = "1.0.1"
+  spec.version      = "2.0"
   spec.summary      = "iOS Bezier Curve View"
   spec.description  = <<-DESC
                       Draw Bezier Arrows in a UIView, using familiar control handles.
@@ -9,11 +11,24 @@ Pod::Spec.new do |spec|
                       DESC
   spec.homepage     = "https://github.com/SwiftArchitect/BezierCurveView"
   spec.screenshots  = "https://cloud.githubusercontent.com/assets/4073988/10705183/0ecbd50e-7991-11e5-8693-10b54587c837.png"
+
+  # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   spec.license      = { :type => "MIT", :file => "LICENSE" }
-  spec.author       = { "Xavier Schott" => "xschott@gmail.com" }
-  spec.social_media_url = 'https://twitter.com/swiftarchitect'
-  spec.platform     = :ios, "7.0"
-  spec.source       = { :git => "https://github.com/SwiftArchitect/BezierCurveView.git", :tag => "v1.0.1" }
-  spec.source_files = "BezierCurveView/*.{h,m,swift}"
+
+  # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+  spec.author       = { "Xavier Schott" => "http://swiftarchitect.com/swiftarchitect/" }
+
+  # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+  spec.platform     = :ios
+  spec.ios.deployment_target = '8.0'
   spec.requires_arc = true
+
+  # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+  spec.source       = { :git => "https://github.com/SwiftArchitect/BezierCurveView.git", :tag => "v3.0" }
+  spec.exclude_files = "BezierCurveExample/*"
+  spec.source_files = "BezierCurveView/*.{swift}"
+
+  # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+  spec.framework = "UIKit"
+
 end
