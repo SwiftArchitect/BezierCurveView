@@ -1,14 +1,32 @@
-# BezierCurveView
-iOS Bezier Curve View
+# Swift Bezier Curve View
 
-Create fancy arrows to light up your interface, all from the comfort of Storyboard and Interface Builder.
+Create and edit arrows to light up your interface, with visual preview in Xcode **Storyboard** and **Interface Builder**.
 
 ![beziercurveviewstoryboard](https://cloud.githubusercontent.com/assets/4073988/10705183/0ecbd50e-7991-11e5-8693-10b54587c837.png)
 
-#Properties
+# Properties
+| Anchors | What it does |
+|:-------|:-----------|
+| An _anchor_ can be located in any of `.topLeft`, `.topRight`, `.bottomLeft`, `.bottomRight` or `.center`| |
+| `startAnchor` | one end of the bezier curve  |
+| `endAnchor` | other end of the bezier curve. If it has an arrow, this is where the arrow point to |
 
- 1. Control which corner the arrow starts from and points to using `startAnchor` and `endAnchor`. An anchor can be located in any of topLeft, topRight, bottomLeft, bottomRight or center.
- 2. Control the relative offset to the anchor, in pixels, using `startOffset` and `endOffset`. An offset is a convenient tool to add marging and breating space
- 3. Control the Bezier control points, albeit neither with mouse nor finger, using `startControl` and `endControl`. While those are adjusted with properties, you can visualize the familiar red handles during development by turning `showHandles` on.
- 4. Control the thickness of the line using `lineWidth` and the size of the arrowhead using `arrowSize`.
- 5. The curve is drawn with the `tintColor`.
+| Offests | What it does |
+|:-------|:-----------|
+| Relative _offset_ to the anchor, in pixels. An offset is a convenient tool to add marging and breating space | |
+| `startOffset` | Relative to `startAnchor` |
+| `endOffset` | Relative to `endAnchor` |
+
+| Curvature | What it does |
+|:-------|:-----------|
+| Bezier curves and controlled by aptly named _control points_. These act as tension vectors and control the rendering of the curve. |
+| `startControl` | starting point |
+| `endControl` | ending point |
+| `showHandles` | visualize control points and associated tension |
+
+| Appearance | What it does |
+|:-------|:-----------|
+| `lineWidth` | control the thickness of the line |
+| `tintColor` | curve color |
+| `arrowSize` | arrow dimension |
+
