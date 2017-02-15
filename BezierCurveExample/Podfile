@@ -1,0 +1,9 @@
+platform :ios, '8.0'
+
+target 'BezierCurveExample' do
+    use_frameworks!
+
+    #pod 'BezierCurveView', :path => '../../BezierCurveView'
+    pod 'BezierCurveView'
+
+end

@@ -30,3 +30,10 @@ Create and edit arrows to light up your interface, with visual preview in Xcode 
 | `tintColor` | curve color |
 | `arrowSize` | arrow dimension |
 
+## Installation
+
+Use Cocoapods or include the source file directly. Cocoapods preferred.
+
+## Demo
+
+Run `pod install` in the `BezierCurveExample` directory, open `BezierCurveExample.xcworkspace` and run.

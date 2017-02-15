@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7531DF473E406A0350AB16F2 /* Pods_BezierCurveExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E4EA301154B187C8ADC2DB5 /* Pods_BezierCurveExample.framework */; };
 		DC5AE10D1E4FE76200F060C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5AE10C1E4FE76200F060C9 /* AppDelegate.swift */; };
 		DC5AE10F1E4FE76200F060C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5AE10E1E4FE76200F060C9 /* ViewController.swift */; };
 		DC5AE1121E4FE76200F060C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC5AE1101E4FE76200F060C9 /* Main.storyboard */; };
 		DC5AE1141E4FE76200F060C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC5AE1131E4FE76200F060C9 /* Assets.xcassets */; };
 		DC5AE1171E4FE76200F060C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC5AE1151E4FE76200F060C9 /* LaunchScreen.storyboard */; };
-		DC5AE1201E4FE98600F060C9 /* BezierCurveArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5AE11F1E4FE98600F060C9 /* BezierCurveArrowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E4EA301154B187C8ADC2DB5 /* Pods_BezierCurveExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BezierCurveExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		339A9EBD9084E64069B25502 /* Pods-BezierCurveExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BezierCurveExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-BezierCurveExample/Pods-BezierCurveExample.release.xcconfig"; sourceTree = "<group>"; };
+		9B3AC2A300F934115A76CBBF /* Pods-BezierCurveExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BezierCurveExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BezierCurveExample/Pods-BezierCurveExample.debug.xcconfig"; sourceTree = "<group>"; };
 		DC5AE1091E4FE76200F060C9 /* BezierCurveExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BezierCurveExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC5AE10C1E4FE76200F060C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC5AE10E1E4FE76200F060C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -23,7 +26,6 @@
 		DC5AE1131E4FE76200F060C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC5AE1161E4FE76200F060C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC5AE1181E4FE76200F060C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DC5AE11F1E4FE98600F060C9 /* BezierCurveArrowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BezierCurveArrowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,18 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7531DF473E406A0350AB16F2 /* Pods_BezierCurveExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FCB618CACDFE708FCFB52AD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9B3AC2A300F934115A76CBBF /* Pods-BezierCurveExample.debug.xcconfig */,
+				339A9EBD9084E64069B25502 /* Pods-BezierCurveExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B1A2C61E661CD0710FA6BA59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E4EA301154B187C8ADC2DB5 /* Pods_BezierCurveExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DC5AE1001E4FE76200F060C9 = {
 			isa = PBXGroup;
 			children = (
 				DC5AE10B1E4FE76200F060C9 /* BezierCurveExample */,
-				DC5AE11E1E4FE98600F060C9 /* BezierCurveView */,
 				DC5AE10A1E4FE76200F060C9 /* Products */,
+				3FCB618CACDFE708FCFB52AD /* Pods */,
+				B1A2C61E661CD0710FA6BA59 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,15 +88,6 @@
 			path = BezierCurveExample;
 			sourceTree = "<group>";
 		};
-		DC5AE11E1E4FE98600F060C9 /* BezierCurveView */ = {
-			isa = PBXGroup;
-			children = (
-				DC5AE11F1E4FE98600F060C9 /* BezierCurveArrowView.swift */,
-			);
-			name = BezierCurveView;
-			path = ../BezierCurveView;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC5AE11B1E4FE76200F060C9 /* Build configuration list for PBXNativeTarget "BezierCurveExample" */;
 			buildPhases = (
+				956FA8D49F4ECFFA80FF2D82 /* [CP] Check Pods Manifest.lock */,
 				DC5AE1051E4FE76200F060C9 /* Sources */,
 				DC5AE1061E4FE76200F060C9 /* Frameworks */,
 				DC5AE1071E4FE76200F060C9 /* Resources */,
+				C4A1D4EBB46AC12E74EDFFDE /* [CP] Embed Pods Frameworks */,
+				8953A6C2D6E30AF2858ACC4C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,12 +159,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8953A6C2D6E30AF2858ACC4C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BezierCurveExample/Pods-BezierCurveExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		956FA8D49F4ECFFA80FF2D82 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C4A1D4EBB46AC12E74EDFFDE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BezierCurveExample/Pods-BezierCurveExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DC5AE1051E4FE76200F060C9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC5AE1201E4FE98600F060C9 /* BezierCurveArrowView.swift in Sources */,
 				DC5AE10F1E4FE76200F060C9 /* ViewController.swift in Sources */,
 				DC5AE10D1E4FE76200F060C9 /* AppDelegate.swift in Sources */,
 			);
@@ -272,6 +334,7 @@
 		};
 		DC5AE11C1E4FE76200F060C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B3AC2A300F934115A76CBBF /* Pods-BezierCurveExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 55K7THBUV8;
@@ -285,6 +348,7 @@
 		};
 		DC5AE11D1E4FE76200F060C9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 339A9EBD9084E64069B25502 /* Pods-BezierCurveExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 55K7THBUV8;
@@ -315,6 +379,7 @@
 				DC5AE11D1E4FE76200F060C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
