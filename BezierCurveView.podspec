@@ -2,7 +2,7 @@ Pod::Spec.new do |spec|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   spec.name         = "BezierCurveView"
-  spec.version      = "3.0.0"
+  spec.version      = "3.1.0"
   spec.summary      = "Swift Bezier Curve View"
   spec.description  = <<-DESC
                       Draw Bezier Arrows in a UIView, using familiar control handles.
@@ -24,7 +24,7 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  spec.source       = { :git => "https://github.com/SwiftArchitect/BezierCurveView.git", :tag => "v3.0.0" }
+  spec.source       = { :git => "https://github.com/SwiftArchitect/BezierCurveView.git", :tag => "v3.1.0" }
   spec.exclude_files = "BezierCurveExample/*"
   spec.source_files = "BezierCurveView/*.{swift}"
 
