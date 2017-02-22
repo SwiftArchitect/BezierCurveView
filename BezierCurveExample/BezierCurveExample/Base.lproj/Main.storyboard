@@ -46,7 +46,7 @@
                                         <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="point" keyPath="endOffset">
-                                        <point key="value" x="60" y="-20"/>
+                                        <point key="value" x="60" y="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="point" keyPath="endControl">
                                         <point key="value" x="-20" y="-100"/>
@@ -76,11 +76,11 @@
                                         <point key="value" x="100" y="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="point" keyPath="endOffset">
-                                        <point key="value" x="20" y="20"/>
+                                        <point key="value" x="0.0" y="20"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="showHandles" value="YES"/>
                                     <userDefinedRuntimeAttribute type="point" keyPath="startControl">
-                                        <point key="value" x="0.0" y="-200"/>
+                                        <point key="value" x="0.0" y="-180"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -93,10 +93,10 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="showHandles" value="YES"/>
                                     <userDefinedRuntimeAttribute type="point" keyPath="startOffset">
-                                        <point key="value" x="65" y="0.0"/>
+                                        <point key="value" x="60" y="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="point" keyPath="startControl">
-                                        <point key="value" x="40" y="200"/>
+                                        <point key="value" x="40" y="180"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="endAnchor">
                                         <integer key="value" value="1"/>
@@ -105,7 +105,7 @@
                                         <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="point" keyPath="endOffset">
-                                        <point key="value" x="-20" y="20"/>
+                                        <point key="value" x="0.0" y="20"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="point" keyPath="endControl">
                                         <point key="value" x="-100" y="0.0"/>
@@ -139,7 +139,7 @@
                                         <point key="value" x="0.0" y="400"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="point" keyPath="endOffset">
-                                        <point key="value" x="-100" y="20"/>
+                                        <point key="value" x="-100" y="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="point" keyPath="startControl">
                                         <point key="value" x="400" y="0.0"/>

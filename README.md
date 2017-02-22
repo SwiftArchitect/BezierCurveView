@@ -29,6 +29,8 @@ Create and edit arrows to light up your interface, with visual preview in Xcode 
 | `lineWidth` | control the thickness of the line |
 | `tintColor` | curve color |
 | `arrowSize` | arrow dimension |
+| `endStyle` | pick between `arrowHead` and `none` (†) |
+(†) _The bezier curve handle end point is **adjusted** to start from the end of the arrow_
 
 ## Installation
 
