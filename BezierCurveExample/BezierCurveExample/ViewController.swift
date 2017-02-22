@@ -31,5 +31,45 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var verticalConstraint: NSLayoutConstraint!
+    @IBOutlet weak var horizontalConstraint: NSLayoutConstraint!
+    var saveConstants = CGSize.zero
+
+    @IBAction func doPanAction(_ sender: UIPanGestureRecognizer) {
+        switch sender.state {
+        case .possible:
+            break
+
+        case .began:
+            saveConstants = CGSize(width: horizontalConstraint.constant,
+                                   height: verticalConstraint.constant)
+        case .changed:
+            let translation = sender.translation(in: view)
+            horizontalConstraint.constant = saveConstants.width + translation.x
+            verticalConstraint.constant = saveConstants.height + translation.y
+            view.layoutIfNeeded()
+
+        case .ended:
+            fallthrough
+//            UIView.animate(withDuration: 0.7,
+//                           delay: 0,
+//                           usingSpringWithDamping: 0.5,
+//                           initialSpringVelocity: 0,
+//                           options: .curveLinear,
+//                           animations: {
+//                            self.horizontalConstraint.constant = self.saveConstants.width
+//                            self.verticalConstraint.constant = self.saveConstants.height
+//                            self.view.layoutIfNeeded()},
+//                           completion: nil)
+
+        case .cancelled:
+            fallthrough
+
+        case .failed:
+            self.horizontalConstraint.constant = self.saveConstants.width
+            self.verticalConstraint.constant = self.saveConstants.height
+            self.view.layoutIfNeeded()
+        }
+    }
 }
 
