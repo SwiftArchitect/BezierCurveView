@@ -12,6 +12,23 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Introduction-->
+        <scene sceneID="x96-VC-Pf2">
+            <objects>
+                <navigationController id="htG-5A-mD7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Introduction" id="WNw-ut-JkF"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sZg-D3-JNx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="yOu-y4-kux" kind="relationship" relationship="rootViewController" id="xID-cK-ZpJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iOS-v2-szz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-193" y="-80"/>
+        </scene>
         <!--Example-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -177,7 +194,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2hM-yS-4VN" userLabel="endA" customClass="BezierHandleView" customModule="BezierCurveView">
-                                        <rect key="frame" x="177.5" y="343" width="20" height="20"/>
+                                        <rect key="frame" x="177.5" y="343.5" width="20" height="20"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="TIh-Kn-iwO"/>
@@ -206,7 +223,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="750.5" height="1334.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="No7-s5-NOe" userLabel="startD" customClass="BezierHandleView" customModule="BezierCurveView">
-                                        <rect key="frame" x="177.5" y="343" width="20" height="20"/>
+                                        <rect key="frame" x="177.5" y="343.5" width="20" height="20"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="4DW-MV-sg6"/>
@@ -249,7 +266,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CE8-Mt-lRj" userLabel="pan">
-                                <rect key="frame" x="-0.5" y="-0.5" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -556,7 +573,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SuI-OA-zCE" userLabel="pan">
-                                <rect key="frame" x="-0.5" y="-0.5" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -621,7 +638,7 @@
             </objects>
             <point key="canvasLocation" x="-192.05397301349328" y="685.60000000000002"/>
         </scene>
-        <!--Introduction-->
+        <!--Bezier Curve-->
         <scene sceneID="bRy-yC-iut">
             <objects>
                 <viewController id="yOu-y4-kux" customClass="ViewController" customModule="BezierCurveExample" customModuleProvider="target" sceneMemberID="viewController">
@@ -633,18 +650,75 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAJ-oj-LTT" userLabel="bezier" customClass="BezierCurveView" customModule="BezierCurveView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2lH-wn-wWR" userLabel="start" customClass="BezierHandleView" customModule="BezierCurveView">
+                                        <rect key="frame" x="109" y="16" width="20" height="20"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="1LP-SJ-8V4"/>
+                                            <constraint firstAttribute="height" constant="20" id="BXj-UV-VJJ"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="dy">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="dx">
+                                                <real key="value" value="-30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kxl-xw-J7d" userLabel="end" customClass="BezierHandleView" customModule="BezierCurveView">
+                                        <rect key="frame" x="19" y="-6" width="20" height="20"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="Yyo-9d-mag"/>
+                                            <constraint firstAttribute="width" constant="20" id="wa2-TG-Yvb"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="dy">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shape">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the camera button" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glO-bU-1Fs" userLabel="cameraHint">
+                                <rect key="frame" x="119" y="64" width="240" height="29"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cP7-Ng-pio" userLabel="hintUnderline">
+                                <rect key="frame" x="119" y="89" width="240" height="1.5"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="t6Q-8k-aGC"/>
+                                </constraints>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dxg-Wd-hLu" userLabel="Blob">
-                                <rect key="frame" x="16" y="91" width="343" height="150.5"/>
+                                <rect key="frame" x="16" y="113" width="343" height="104"/>
                                 <string key="text">A dynamic curve is an elegant manner to point to objects in your interface. It adusts to different screen sizes and orientations using simple constraints.</string>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ZSL-Wf-iGu" userLabel="Curve1" customClass="BezierCurveView" customModule="BezierCurveView">
-                                <rect key="frame" x="0.0" y="0.0" width="750.5" height="1334"/>
+                                <rect key="frame" x="0.0" y="0.0" width="750.5" height="1334.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Miz-vp-ceD" userLabel="start1" customClass="BezierHandleView" customModule="BezierCurveView">
-                                        <rect key="frame" x="329.5" y="337.5" width="20" height="20"/>
+                                        <rect key="frame" x="329.5" y="338" width="20" height="20"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -689,10 +763,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="rAE-ZI-Qla" userLabel="Curve2" customClass="BezierCurveView" customModule="BezierCurveView">
-                                <rect key="frame" x="0.0" y="0.0" width="750.5" height="1334"/>
+                                <rect key="frame" x="0.0" y="0.0" width="750.5" height="1334.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s30-j1-Wvf" userLabel="start2" customClass="BezierHandleView" customModule="BezierCurveView">
-                                        <rect key="frame" x="339.5" y="337.5" width="20" height="20"/>
+                                        <rect key="frame" x="339.5" y="338" width="20" height="20"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -737,14 +811,14 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W9v-Uk-TKR" userLabel="Underline">
-                                <rect key="frame" x="215" y="345.5" width="144.5" height="2"/>
+                                <rect key="frame" x="215" y="346" width="144.5" height="2"/>
                                 <color key="backgroundColor" red="0.085386164489999999" green="0.48004096750000003" blue="0.9989228845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1.5" id="vFA-zx-s8q"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap there for more" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xq7-db-2JA" userLabel="Tap here">
-                                <rect key="frame" x="214.5" y="321" width="144.5" height="24"/>
+                                <rect key="frame" x="214.5" y="321.5" width="144.5" height="24"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -755,7 +829,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KtI-ug-zEC" userLabel="pan">
-                                <rect key="frame" x="-0.5" y="-0.5" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -765,37 +839,56 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="2lH-wn-wWR" firstAttribute="centerX" secondItem="cP7-Ng-pio" secondAttribute="leading" id="0ur-Ly-HkY"/>
+                            <constraint firstItem="kxl-xw-J7d" firstAttribute="centerY" secondItem="baq-fv-CIa" secondAttribute="bottom" constant="4" id="1Vs-M8-5cp"/>
                             <constraint firstItem="WLe-IT-En5" firstAttribute="centerY" secondItem="7Gu-cY-1rS" secondAttribute="top" constant="-10" id="3fF-P0-7zD"/>
+                            <constraint firstItem="glO-bU-1Fs" firstAttribute="top" secondItem="baq-fv-CIa" secondAttribute="bottom" id="5PF-ZX-lba"/>
                             <constraint firstItem="KtI-ug-zEC" firstAttribute="width" secondItem="YfE-qm-5il" secondAttribute="width" id="6qd-4d-E3L"/>
+                            <constraint firstItem="cP7-Ng-pio" firstAttribute="leading" secondItem="glO-bU-1Fs" secondAttribute="leading" id="9Zx-vq-dM1"/>
                             <constraint firstItem="rAE-ZI-Qla" firstAttribute="bottom" secondItem="YfE-qm-5il" secondAttribute="bottom" multiplier="2" priority="750" id="9xd-Ra-vgU"/>
                             <constraint firstItem="s30-j1-Wvf" firstAttribute="centerY" secondItem="W9v-Uk-TKR" secondAttribute="bottom" id="CNr-lE-3S7"/>
+                            <constraint firstItem="nAJ-oj-LTT" firstAttribute="top" secondItem="baq-fv-CIa" secondAttribute="bottom" id="CYB-3t-iUr"/>
                             <constraint firstItem="W9v-Uk-TKR" firstAttribute="leading" secondItem="xq7-db-2JA" secondAttribute="leading" id="DmC-hG-3xu"/>
-                            <constraint firstItem="Dxg-Wd-hLu" firstAttribute="centerY" secondItem="YfE-qm-5il" secondAttribute="centerY" multiplier="0.5" id="EAL-FU-slI"/>
                             <constraint firstItem="rAE-ZI-Qla" firstAttribute="leading" secondItem="YfE-qm-5il" secondAttribute="leading" id="GHD-rO-f8w"/>
                             <constraint firstItem="W9v-Uk-TKR" firstAttribute="top" secondItem="xq7-db-2JA" secondAttribute="bottom" id="Gds-KD-YfJ"/>
                             <constraint firstItem="KtI-ug-zEC" firstAttribute="height" secondItem="YfE-qm-5il" secondAttribute="height" id="IBF-3s-rAh"/>
+                            <constraint firstAttribute="trailing" secondItem="nAJ-oj-LTT" secondAttribute="trailing" id="LdT-Gk-OKq"/>
                             <constraint firstItem="ZSL-Wf-iGu" firstAttribute="bottom" secondItem="YfE-qm-5il" secondAttribute="bottom" multiplier="2" priority="750" id="MpF-gY-qDg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Dxg-Wd-hLu" secondAttribute="trailing" id="PF2-aL-YRZ"/>
                             <constraint firstItem="rAE-ZI-Qla" firstAttribute="top" secondItem="YfE-qm-5il" secondAttribute="top" id="RB2-CD-9XG"/>
                             <constraint firstItem="Ldw-c4-Ps5" firstAttribute="centerX" secondItem="YfE-qm-5il" secondAttribute="centerX" constant="18" id="UMe-Nb-N50"/>
                             <constraint firstItem="KtI-ug-zEC" firstAttribute="centerY" secondItem="YfE-qm-5il" secondAttribute="centerY" id="XeZ-TL-ymX"/>
+                            <constraint firstItem="2lH-wn-wWR" firstAttribute="centerY" secondItem="cP7-Ng-pio" secondAttribute="centerY" id="YfG-3o-8SV"/>
                             <constraint firstItem="Ldw-c4-Ps5" firstAttribute="centerY" secondItem="7Gu-cY-1rS" secondAttribute="top" constant="-8" id="aUv-lb-Rsa"/>
                             <constraint firstItem="ZSL-Wf-iGu" firstAttribute="top" secondItem="YfE-qm-5il" secondAttribute="top" id="csh-cF-SoH"/>
                             <constraint firstItem="Miz-vp-ceD" firstAttribute="centerX" secondItem="W9v-Uk-TKR" secondAttribute="trailing" constant="-20" id="dOW-uF-K56"/>
                             <constraint firstItem="Dxg-Wd-hLu" firstAttribute="leading" secondItem="YfE-qm-5il" secondAttribute="leadingMargin" id="dUj-D0-DhH"/>
                             <constraint firstItem="rAE-ZI-Qla" firstAttribute="trailing" secondItem="YfE-qm-5il" secondAttribute="trailing" multiplier="2" priority="750" id="fMc-2X-Cjd"/>
+                            <constraint firstItem="glO-bU-1Fs" firstAttribute="trailing" secondItem="YfE-qm-5il" secondAttribute="trailingMargin" id="hJx-dp-Om9"/>
                             <constraint firstItem="Miz-vp-ceD" firstAttribute="centerY" secondItem="W9v-Uk-TKR" secondAttribute="bottom" id="lTc-9C-8m9"/>
+                            <constraint firstItem="nAJ-oj-LTT" firstAttribute="leading" secondItem="YfE-qm-5il" secondAttribute="leading" id="nYp-NE-EYX"/>
                             <constraint firstItem="xq7-db-2JA" firstAttribute="centerY" secondItem="YfE-qm-5il" secondAttribute="centerY" id="nmt-jf-Mi5"/>
                             <constraint firstItem="KtI-ug-zEC" firstAttribute="centerX" secondItem="YfE-qm-5il" secondAttribute="centerX" id="pWe-Tm-S9U"/>
+                            <constraint firstItem="Dxg-Wd-hLu" firstAttribute="top" secondItem="glO-bU-1Fs" secondAttribute="bottom" constant="20" id="pnc-rv-gt8"/>
+                            <constraint firstItem="cP7-Ng-pio" firstAttribute="trailing" secondItem="glO-bU-1Fs" secondAttribute="trailing" id="qa1-Eq-c9k"/>
+                            <constraint firstItem="nAJ-oj-LTT" firstAttribute="bottom" secondItem="7Gu-cY-1rS" secondAttribute="top" id="tnt-fs-iJY"/>
                             <constraint firstItem="ZSL-Wf-iGu" firstAttribute="leading" secondItem="YfE-qm-5il" secondAttribute="leading" id="uI2-fl-4qf"/>
                             <constraint firstItem="ZSL-Wf-iGu" firstAttribute="trailing" secondItem="YfE-qm-5il" secondAttribute="trailing" multiplier="2" priority="750" id="vGG-by-Ku9"/>
+                            <constraint firstItem="cP7-Ng-pio" firstAttribute="top" secondItem="glO-bU-1Fs" secondAttribute="baseline" constant="4" id="vRs-8b-fJe"/>
                             <constraint firstItem="WLe-IT-En5" firstAttribute="centerX" secondItem="YfE-qm-5il" secondAttribute="centerX" multiplier="1.7" constant="0.69999999999999996" id="vmJ-Fy-Dbc"/>
                             <constraint firstItem="xq7-db-2JA" firstAttribute="trailing" secondItem="YfE-qm-5il" secondAttribute="trailingMargin" id="x1X-MJ-38v"/>
+                            <constraint firstItem="kxl-xw-J7d" firstAttribute="centerX" secondItem="YfE-qm-5il" secondAttribute="leadingMargin" constant="13" id="x3V-DL-H92"/>
                             <constraint firstItem="W9v-Uk-TKR" firstAttribute="trailing" secondItem="xq7-db-2JA" secondAttribute="trailing" id="xaq-a6-uI1"/>
                             <constraint firstItem="s30-j1-Wvf" firstAttribute="centerX" secondItem="W9v-Uk-TKR" secondAttribute="trailing" constant="-10" id="yjB-gU-WLC"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Introduction" id="TSb-aE-lJP"/>
+                    <navigationItem key="navigationItem" title="Bezier Curve" id="St7-gF-YPh">
+                        <barButtonItem key="leftBarButtonItem" systemItem="camera" id="jnx-JV-Oqk">
+                            <connections>
+                                <action selector="doHintAction:" destination="yOu-y4-kux" id="KoY-Ql-yCU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="horizontalConstraint" destination="x1X-MJ-38v" id="Vuw-Sb-npl"/>
                         <outlet property="verticalConstraint" destination="nmt-jf-Mi5" id="kch-3T-gik"/>
@@ -808,7 +901,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-951.27436281859082" y="685.60000000000002"/>
+            <point key="canvasLocation" x="561" y="-80"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="y2y-tC-n4c">
@@ -820,14 +913,14 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="yOu-y4-kux" kind="relationship" relationship="viewControllers" id="eEM-YD-rzV"/>
-                        <segue destination="Lpz-FV-odj" kind="relationship" relationship="viewControllers" id="Eoj-3r-61v"/>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="rUd-CE-PbW"/>
+                        <segue destination="htG-5A-mD7" kind="relationship" relationship="viewControllers" id="HBX-pj-d22"/>
+                        <segue destination="Lpz-FV-odj" kind="relationship" relationship="viewControllers" id="X9U-Zd-wby"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="noJ-1T-bpw"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dfS-TH-jwA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-951" y="-79"/>
+            <point key="canvasLocation" x="-982" y="-81"/>
         </scene>
     </scenes>
 </document>

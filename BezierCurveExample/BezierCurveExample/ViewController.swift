@@ -71,5 +71,13 @@ class ViewController: UIViewController {
             self.view.layoutIfNeeded()
         }
     }
+
+    @IBAction func doHintAction(_ sender: Any) {
+        let alert = UIAlertController(title: nil,
+                                      message: "Touch and drag anywhere to animate",
+                                      preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true, completion: nil)
+    }
 }
 
