@@ -14,7 +14,7 @@ dsa_priv.pem
 
 # Xcode 4
 xcuserdata/
-project.xcworkspace/
+*.xcworkspace/
 DerivedData/
 
 # Generated files
@@ -41,4 +41,8 @@ Backup[ ]of[ ]*.numbers/
 # Cocoapods
 Podfile.lock
 Pods/
+
+# Carthage
+Cartfile.resolved
+Carthage/
 

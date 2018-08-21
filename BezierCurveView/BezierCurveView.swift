@@ -1,13 +1,7 @@
 //    @file:    BezierCurveView.swift
 //    @project: BezierCurveView
 //
-//    @author:  Xavier Schott
-//              mailto://xschott@gmail.com
-//              http://thegothicparty.com
-//              tel://+18089383634
-//
-//    @license: http://opensource.org/licenses/MIT
-//    Copyright (c) 2017, Xavier Schott
+//    Copyright © 2017, 2018 Xavier Schott
 //
 //    Permission is hereby granted, free of charge, to any person obtaining a copy
 //    of this software and associated documentation files (the "Software"), to deal
@@ -152,7 +146,7 @@ public class BezierCurveView: UIView {
         case .arrowHead:
             // Connect the arrowhead to the shaft
             let θ = radAngle(o:o, m:m)
-            let π = CGFloat(M_PI)
+            let π = CGFloat.pi
             let origin = polarToCartesian(o: o, r: -size, θ: θ + π)
             let shaft = polarToCartesian(o: origin, r: size/2, θ: θ + π)
             context.move(to: origin)
@@ -186,7 +180,7 @@ public class BezierCurveView: UIView {
             fallthrough
         case .disc:
             let θ = radAngle(o:o, m:m)
-            let π = CGFloat(M_PI)
+            let π = CGFloat.pi
             let origin = polarToCartesian(o: o, r: -size, θ: θ + π)
             context.addEllipse(in: CGRect(x: o.x - size,
                                           y: o.y - size,

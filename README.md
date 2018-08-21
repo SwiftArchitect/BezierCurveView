@@ -1,7 +1,14 @@
 # Swift Bezier Curve View
 
+[![Build Status](https://travis-ci.org/SwiftArchitect/BezierCurveView.svg?branch=master)](https://travis-ci.org/SwiftArchitect/BezierCurveView)
+[![CocoaPods](https://img.shields.io/cocoapods/v/BezierCurveView.svg)](https://cocoapods.org/pods/BezierCurveView)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
+![MIT License](https://img.shields.io/cocoapods/l/BezierCurveView.svg)
+
 Bezier curves are very handy to point to objects in your interface, for onboarding and help screens:
+
 ![camerahint](https://cloud.githubusercontent.com/assets/4073988/23232001/a1028ede-f8fe-11e6-85c9-e48058e45e35.png)
+
 Create and edit arrows to light up your interface, with visual preview in Xcode **Storyboard** and **Interface Builder**.
 
 ## Technical Discussion
