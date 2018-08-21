@@ -22,6 +22,7 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios
   spec.ios.deployment_target = '11.0'
   spec.requires_arc = true
+  spec.swift_version = '4.1.2'
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   spec.source       = { :git => "https://github.com/SwiftArchitect/BezierCurveView.git", :tag => "v4.0.1" }
